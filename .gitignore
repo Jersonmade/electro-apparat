@@ -33,4 +33,5 @@ build/
 .vscode/
 
 ### YML ###
-application.yml
+/application.yml
+!application.yml.example
