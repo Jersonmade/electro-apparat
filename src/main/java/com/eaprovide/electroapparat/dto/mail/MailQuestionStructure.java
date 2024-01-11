@@ -1,4 +1,4 @@
-package com.eaprovide.electroapparat.dto;
+package com.eaprovide.electroapparat.dto.mail;
 
 import lombok.Data;
 

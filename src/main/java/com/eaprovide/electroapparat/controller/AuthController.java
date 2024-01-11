@@ -1,7 +1,7 @@
 package com.eaprovide.electroapparat.controller;
 
-import com.eaprovide.electroapparat.dto.SignInRequest;
-import com.eaprovide.electroapparat.dto.SignUpRequest;
+import com.eaprovide.electroapparat.dto.auth.SignInRequest;
+import com.eaprovide.electroapparat.dto.auth.SignUpRequest;
 import com.eaprovide.electroapparat.jwt.JwtCore;
 import com.eaprovide.electroapparat.model.User;
 import com.eaprovide.electroapparat.repo.UserRepo;

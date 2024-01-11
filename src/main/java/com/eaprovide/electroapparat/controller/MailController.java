@@ -1,7 +1,7 @@
 package com.eaprovide.electroapparat.controller;
 
-import com.eaprovide.electroapparat.dto.MailOrderStructure;
-import com.eaprovide.electroapparat.dto.MailQuestionStructure;
+import com.eaprovide.electroapparat.dto.mail.MailOrderStructure;
+import com.eaprovide.electroapparat.dto.mail.MailQuestionStructure;
 import com.eaprovide.electroapparat.service.MailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

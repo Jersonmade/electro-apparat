@@ -18,6 +18,7 @@ public class ProductRequest {
     private String description;
     private String manufactory;
     private String categories;
+    private String subcategory;
     private BigDecimal price;
     private List<String> images;
 }

@@ -24,6 +24,10 @@ spring:
           auth:
           starttls:
             enable:
+  servlet:
+    multipart:
+      max-file-size:
+      max-request-size:
 jwt:
   secret:
   lifetime:

@@ -23,6 +23,7 @@ public class ProductService {
                 .description(productRequest.getDescription())
                 .manufactory(productRequest.getManufactory())
                 .categories(productRequest.getCategories())
+                .subcategory(productRequest.getSubcategory())
                 .price(productRequest.getPrice())
                 .images(productRequest.getImages())
                 .build();
@@ -34,6 +35,13 @@ public class ProductService {
     public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepo.findAll();
         return products.stream().map(this::mapToProductResponse).toList();
+    }
+
+    public ProductResponse getProductById(Long id) {
+        Product product = productRepo.findById(id).orElseThrow(() -> {
+            return new RuntimeException("Product not found");
+        });
+        return mapToProductResponse(product);
     }
 
     public void deleteProduct(Long id) {
@@ -49,6 +57,7 @@ public class ProductService {
                 .description(product.getDescription())
                 .manufactory(product.getManufactory())
                 .categories(product.getCategories())
+                .subcategory(product.getSubcategory())
                 .price(product.getPrice())
                 .images(product.getImages())
                 .build();

@@ -1,7 +1,7 @@
 package com.eaprovide.electroapparat.service;
 
-import com.eaprovide.electroapparat.dto.MailOrderStructure;
-import com.eaprovide.electroapparat.dto.MailQuestionStructure;
+import com.eaprovide.electroapparat.dto.mail.MailOrderStructure;
+import com.eaprovide.electroapparat.dto.mail.MailQuestionStructure;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
@@ -30,7 +30,7 @@ public class MailService {
                 "Телефон - " + mailOrderStructure.getNumberOfTelephone() + "\n" +
                 "Адрес доставки - " + mailOrderStructure.getAddress()
         );
-        simpleMailMessage.setTo("iskornevm231@gmail.com");
+        simpleMailMessage.setTo("dima.sergeev.0404@inbox.ru");
 
         javaMailSender.send(simpleMailMessage);
     }

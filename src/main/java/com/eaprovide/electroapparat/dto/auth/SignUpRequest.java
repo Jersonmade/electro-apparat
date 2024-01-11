@@ -1,4 +1,4 @@
-package com.eaprovide.electroapparat.dto;
+package com.eaprovide.electroapparat.dto.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
