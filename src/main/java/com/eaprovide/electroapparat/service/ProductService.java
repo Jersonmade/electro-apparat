@@ -26,6 +26,7 @@ public class ProductService {
                 .subcategory(productRequest.getSubcategory())
                 .price(productRequest.getPrice())
                 .images(productRequest.getImages())
+                .documentations(productRequest.getDocumentations())
                 .build();
 
         productRepo.save(product);
@@ -60,6 +61,7 @@ public class ProductService {
                 .subcategory(product.getSubcategory())
                 .price(product.getPrice())
                 .images(product.getImages())
+                .documentations(product.getDocumentations())
                 .build();
     }
 }

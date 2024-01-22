@@ -22,4 +22,5 @@ public class ProductResponse {
     private String subcategory;
     private BigDecimal price;
     private List<String> images;
+    private List<String> documentations;
 }

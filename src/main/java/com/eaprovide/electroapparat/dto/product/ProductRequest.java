@@ -21,4 +21,5 @@ public class ProductRequest {
     private String subcategory;
     private BigDecimal price;
     private List<String> images;
+    private List<String> documentations;
 }

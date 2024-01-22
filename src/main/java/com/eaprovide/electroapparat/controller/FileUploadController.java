@@ -16,8 +16,8 @@ import java.nio.file.Paths;
 @RequestMapping("/api/upload")
 public class FileUploadController {
 
-    @PostMapping
-    public ResponseEntity<String> handleFileUpload(@RequestParam("file")MultipartFile file) {
+    @PostMapping("/docs")
+    public ResponseEntity<String> handleFileDocumentationUpload(@RequestParam("file") MultipartFile file) {
         String uploadPath = "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\spring";
 
         try {
@@ -27,6 +27,21 @@ public class FileUploadController {
             return ResponseEntity.ok("Файл успешно загружен!");
         }
         catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body("Ошибка загрузки файла");
+        }
+    }
+
+    @PostMapping("/photo")
+    public ResponseEntity<String> handleFilePhotoUpload(@RequestParam("file") MultipartFile file) {
+        String uploadPath = "C:\\Users\\Asus\\OneDrive\\Рабочий стол\\spring";
+
+        try {
+            byte[] bytes = file.getBytes();
+            java.nio.file.Path path = Paths.get(uploadPath + File.separator + file.getOriginalFilename());
+            Files.write(path, bytes);
+            return ResponseEntity.ok("Файл успешно загружен");
+        } catch (IOException e) {
             e.printStackTrace();
             return ResponseEntity.status(500).body("Ошибка загрузки файла");
         }
