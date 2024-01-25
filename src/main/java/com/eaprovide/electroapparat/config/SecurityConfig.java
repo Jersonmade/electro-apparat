@@ -66,6 +66,8 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/product").fullyAuthenticated()
                         .requestMatchers(HttpMethod.DELETE, "/api/product/{id}").fullyAuthenticated()
+                        .requestMatchers("/api/upload/docs").fullyAuthenticated()
+                        .requestMatchers("api/upload/photo").fullyAuthenticated()
                         .anyRequest().permitAll()
                 )
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
