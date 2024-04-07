@@ -22,7 +22,9 @@ public class MailService {
 
         simpleMailMessage.setFrom(fromMail);
         simpleMailMessage.setSubject("Оформление заказа");
-        simpleMailMessage.setText("Фамилия - " + mailOrderStructure.getSurname() + "\n" +
+        simpleMailMessage.setText("Общая стоимость - " + mailOrderStructure.getPrice() + "\n" +
+                "Продукция:" + "\n" + mailOrderStructure.getProduct() + "\n" +
+                "Фамилия - " + mailOrderStructure.getSurname() + "\n" +
                 "Имя - " + mailOrderStructure.getName() + "\n" +
                 "Название организации - " + mailOrderStructure.getNameOfOrganization() + "\n" +
                 "ИНН - " + mailOrderStructure.getInn() + "\n" +
