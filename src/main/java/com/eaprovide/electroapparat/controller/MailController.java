@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/mail")
+@CrossOrigin(origins = "*")
 public class MailController {
 
     private final MailService mailService;

@@ -45,6 +45,23 @@ public class ProductService {
         return mapToProductResponse(product);
     }
 
+    public void updateProduct(Long id, ProductRequest request) {
+        Product product = productRepo.findById(id).orElseThrow(()
+                -> new RuntimeException("Товар с артикулом \" + id + \" не найден"));
+
+        product.setNameId(request.getNameId());
+        product.setName(request.getName());
+        product.setDescription(request.getDescription());
+        product.setManufactory(request.getManufactory());
+        product.setCategories(request.getCategories());
+        product.setSubcategory(request.getSubcategory());
+        product.setPrice(request.getPrice());
+        product.setImages(request.getImages());
+        product.setDocumentations(request.getDocumentations());
+
+        productRepo.save(product);
+    }
+
     public void deleteProduct(Long id) {
         productRepo.deleteById(id);
         log.info("Product with {} is deleted + id");

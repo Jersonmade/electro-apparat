@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/product")
+@CrossOrigin(origins = "*")
 public class ProductController {
     private final ProductService productService;
 
@@ -32,6 +33,15 @@ public class ProductController {
     @ResponseStatus(HttpStatus.OK)
     public ProductResponse getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
+    }
+
+    @PatchMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void updateProduct(
+            @PathVariable Long id,
+            @RequestBody ProductRequest productRequest
+    ) {
+        productService.updateProduct(id, productRequest);
     }
 
     @DeleteMapping("/{id}")
