@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://roundhouse.proxy.rlwy.net:52465/railway
+    username: postgres
+    password: GPSrJciclkKhWcdYNtCaGgdDIOyyuFaK
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: testeltecshop@gmail.com
+    password: irbc rmao yjfx zpfy
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+server:
+  port: 8081
+jwt:
+  secret: AOHyNxnYKnkxxW4DcUDvvXMGZMm4Kl2JeRGyWV9kNkc
+  lifetime: 120000
