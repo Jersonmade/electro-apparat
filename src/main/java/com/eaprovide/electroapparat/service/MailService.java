@@ -30,7 +30,7 @@ public class MailService {
                 "Телефон - " + mailOrderStructure.getNumberOfTelephone() + "\n" +
                 "Адрес доставки - " + mailOrderStructure.getAddress()
         );
-        simpleMailMessage.setTo("dima.sergeev.0404@inbox.ru");
+        simpleMailMessage.setTo("t.eltecshop@ea-provide.com");
 
         javaMailSender.send(simpleMailMessage);
     }
@@ -46,7 +46,7 @@ public class MailService {
                 "E-mail - " + mailQuestionStructure.getEmail() + "\n" +
                 "Вопрос - " + mailQuestionStructure.getQuestion()
         );
-        simpleMailMessage.setTo("iskornevm231@gmail.com");
+        simpleMailMessage.setTo("t.eltecshop@ea-provide.com");
 
         javaMailSender.send(simpleMailMessage);
     }
