@@ -19,16 +19,4 @@ public class ElectroApparatApplication {
         SpringApplication.run(ElectroApparatApplication.class, args);
     }
 
-    @Bean
-    public CommandLineRunner loadData(UserRepo userRepo) {
-        return args -> {
-            User user = new User();
-            user.setUsername("ADMIN");
-            user.setEmail("Admin@mail.ru");
-            user.setPassword(passwordEncoder.encode("123456"));
-
-            userRepo.save(user);
-        };
-    }
-
 }
